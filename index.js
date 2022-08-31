@@ -119,8 +119,8 @@ class ElectrumClient extends Client {
   blockchainScripthash_listunspentBatch(scripthash) {
     return this.requestBatch('blockchain.scripthash.listunspent', scripthash);
   }
-  blockchainScripthash_getHistory(scripthash) {
-    return this.request('blockchain.scripthash.get_history', [scripthash]);
+  blockchainScripthash_getHistory(scripthash, from, to) {
+    return this.request('blockchain.scripthash.get_history', [scripthash, from, to]);
   }
   blockchainScripthash_getHistoryBatch(scripthash) {
     return this.requestBatch('blockchain.scripthash.get_history', scripthash);
